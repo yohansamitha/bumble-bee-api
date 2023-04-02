@@ -24,6 +24,7 @@ public class Userrole implements Serializable {
     @Id
     @Column(name = "USERROLECODE", unique = true, nullable = false, length = 16)
     private String userrolecode;
+    @Column(name = "STATUS", length = 100)
     private String status;
     @Column(name = "DESCRIPTION", length = 64)
     private String description;

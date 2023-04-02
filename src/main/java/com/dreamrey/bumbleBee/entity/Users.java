@@ -42,9 +42,6 @@ public class Users implements java.io.Serializable, UserDetails {
     @JsonIgnore
     private String password;
 
-    @Column(name = "FULLNAME", length = 100)
-    private String fullname;
-
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "LASTUPDATEDTIME", nullable = false, length = 19)
     @UpdateTimestamp
@@ -55,12 +52,11 @@ public class Users implements java.io.Serializable, UserDetails {
     @CreationTimestamp
     private Date createdtime;
 
-    public Users(String username, String status, Userrole userrole, String password, String fullname) {
+    public Users(String username, String status, Userrole userrole, String password) {
         this.username = username;
         this.status = status;
         this.userrole = userrole;
         this.password = password;
-        this.fullname = fullname;
     }
 
     //    TODO : validate this
